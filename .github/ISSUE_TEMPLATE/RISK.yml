@@ -1,0 +1,38 @@
+name: Create a project Risk
+description: A project risk is an uncertain event that may or may not occur during a project.
+title: "[Risk]: "
+labels: ["risk"]
+body:
+  - type: dropdown
+    id: likelihood
+    attributes:
+      label: What is the likelyhood for this risk to happen?
+      multiple: true
+      options:
+        - 🟥 High
+        - 🟨 Medium
+        - 🟩 Low
+  - type: dropdown
+    id: impact
+    attributes:
+      label: What is the impact of the risk?
+      multiple: true
+      options:
+        - 🟥 High
+        - 🟨 Medium
+        - 🟩 Low
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Mitigation
+      description: What steps can be taken to avoid this risk?
+    validations:
+      required: false
+  - type: textarea
+    id: contingency
+    attributes:
+      label: Contingency plan
+      description: What is the backup plan if risk happens?
+      placeholder: A contingency plan is a plan for a “what if” scenario that could ruin your project or business.
+    validations:
+      required: false
